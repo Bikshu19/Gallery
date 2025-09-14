@@ -23,7 +23,7 @@ export default function Register() {
     setError("");
     
     try {
-      await axios.post("http://localhost:5000/api/auth/register", form);
+      await axios.post("https://gallery-qzxx.onrender.com/api/auth/register", form);
       setSuccess(true);
       
       // Reset form
