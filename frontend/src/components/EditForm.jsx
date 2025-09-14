@@ -19,7 +19,7 @@ export default function EditForm({ item, token, onUpdated, onClose }) {
     setError("");
     try {
       await axios.put(
-        `http://localhost:5000/api/gallery/${item._id}`,
+        `https://gallery-qzxx.onrender.com/api/gallery/${item._id}`,
         form,
         { headers: { Authorization: `Bearer ${token}` } }
       );
