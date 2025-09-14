@@ -14,7 +14,7 @@ export default function Gallery() {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/gallery");
+        const res = await axios.get("https://gallery-qzxx.onrender.com/api/gallery");
         setImages(res.data);
       } catch (err) {
         setError("Failed to load gallery. Please try again later.");
