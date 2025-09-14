@@ -44,7 +44,7 @@ export default function UploadForm({ onUploaded }) {
       data.append("category", form.category);
       data.append("image", file);
 
-      await axios.post("http://localhost:5000/api/gallery/upload", data, {
+      await axios.post("https://gallery-qzxx.onrender.com/api/gallery/upload", data, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
