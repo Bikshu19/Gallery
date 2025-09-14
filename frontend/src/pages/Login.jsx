@@ -24,7 +24,7 @@ export default function Login() {
     setError("");
     
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", form);
+      const res = await axios.post("https://gallery-qzxx.onrender.com/api/auth/login", form);
       login(res.data.token, res.data.role);
 
       if (res.data.role === "admin") navigate("/admin");
