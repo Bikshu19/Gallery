@@ -15,7 +15,7 @@ export default function AdminDashboard() {
   // fetch gallery items
   const fetchImages = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/gallery");
+      const res = await axios.get("https://gallery-qzxx.onrender.com/api/gallery");
       setImages(res.data);
     } catch (err) {
       console.error("Error fetching images:", err);
@@ -34,7 +34,7 @@ export default function AdminDashboard() {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this item?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/gallery/${id}`, {
+      await axios.delete(`https://gallery-qzxx.onrender.com/api/gallery/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchImages();
